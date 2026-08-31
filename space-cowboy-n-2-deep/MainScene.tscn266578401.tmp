@@ -219,8 +219,9 @@ zoom = Vector2(4, 4)
 [node name="Capybara" parent="." unique_id=788344269 instance=ExtResource("4_uxrcv")]
 position = Vector2(817, 348)
 
-[node name="BreakableTile" type="StaticBody2D" parent="." unique_id=1885157591]
+[node name="BreakableTile" type="StaticBody2D" parent="." unique_id=1885157591 node_paths=PackedStringArray("tilemap")]
 script = ExtResource("6_a814b")
+tilemap = NodePath("../Area2D2/SNOWTILEMAP")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BreakableTile" unique_id=435442003]
 position = Vector2(416, 244)
@@ -242,8 +243,4 @@ tile_set = SubResource("TileSet_a814b")
 position = Vector2(752, 292)
 shape = SubResource("RectangleShape2D_5crlr")
 
-[node name="Node2D" type="Node2D" parent="." unique_id=646469481]
-position = Vector2(720, 276)
-
-[connection signal="breakblock" from="MainCharacter" to="BreakableTile" method="_on_main_character_breakblock"]
 [connection signal="body_entered" from="Area2D3" to="BreakableTile" method="_on_area_2d_3_body_entered"]

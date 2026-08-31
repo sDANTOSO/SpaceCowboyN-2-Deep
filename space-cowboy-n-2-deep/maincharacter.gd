@@ -5,11 +5,18 @@ extends CharacterBody2D
 const SPEED = 80.0
 const JUMP_VELOCITY = -300.0
 var direction1:Vector2=Vector2.ZERO
+var direction2:Vector2= direction1
+signal breakblock;
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+
+	if Input.is_action_just_pressed("destroy"):
+		
+		direction2.x = direction1.x - 10
+		breakblock.emit(direction2)
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -24,6 +31,7 @@ func _physics_process(delta: float) -> void:
 	
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
 
 	move_and_slide()
 	update_facing_direction()

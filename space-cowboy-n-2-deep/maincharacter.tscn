@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://6pxca1e8b7nw"]
+[gd_scene format=3 uid="uid://6pxca1e8b7nw"]
 
 [ext_resource type="Script" uid="uid://d1qilsyt8em2u" path="res://maincharacter.gd" id="1_0aigr"]
 [ext_resource type="Texture2D" uid="uid://m3qrvf4xhv4t" path="res://Assets/lucia-barrero-habilidx-sam-removebg-preview.png" id="1_l7kkk"]
@@ -17,31 +17,31 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_u2gkk")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
 
-[node name="MainCharacter" type="CharacterBody2D"]
+[node name="MainCharacter" type="CharacterBody2D" unique_id=1843924433]
 collision_mask = 31
 floor_stop_on_slope = false
 floor_block_on_wall = false
 safe_margin = 1.494
 script = ExtResource("1_0aigr")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1975193509]
 position = Vector2(515, 420)
 scale = Vector2(0.046511613, 0.049095675)
 texture = ExtResource("1_l7kkk")
 centered = false
 flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=590774478]
 position = Vector2(535, 429)
 scale = Vector2(0.2802326, 0.27325603)
 shape = SubResource("CapsuleShape2D_0aigr")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2045645243]
 visible = false
 sprite_frames = SubResource("SpriteFrames_0aigr")
 flip_h = true

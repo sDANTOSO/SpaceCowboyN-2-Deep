@@ -242,8 +242,4 @@ tile_set = SubResource("TileSet_a814b")
 position = Vector2(752, 292)
 shape = SubResource("RectangleShape2D_5crlr")
 
-[node name="Node2D" type="Node2D" parent="." unique_id=646469481]
-position = Vector2(720, 276)
-
-[connection signal="breakblock" from="MainCharacter" to="BreakableTile" method="_on_main_character_breakblock"]
 [connection signal="body_entered" from="Area2D3" to="BreakableTile" method="_on_area_2d_3_body_entered"]
