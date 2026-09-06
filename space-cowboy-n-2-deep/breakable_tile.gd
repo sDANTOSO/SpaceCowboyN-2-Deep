@@ -17,7 +17,7 @@ func destroy_tile_at_world_position(world_pos) -> void:
 	var vector2i = Vector2i(736,313) 
 	#$"../Area2D2/SNOWTILEMAP/SnowLayer".erase_cell(Vector2i(720, 273))
 	#func void erase_cell(snowtilemap,vector2i)
-	SetCell(0,vector2i);
+#SetCell(0,vector2i);
 	print(vector2i)
 	#layer: int, coords: Vector2i
 	
