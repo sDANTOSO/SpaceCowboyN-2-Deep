@@ -16,6 +16,8 @@ So if I were to do it again I would spend as little time on art as possible and 
 
 ## How to play my game 
 <img src="Images/gameplay.gif" alt="Gameplay" width="800" height="500">
+The controls are a-d for left - right
+And spacebar for jump
 
 My game can be played on itch
 
